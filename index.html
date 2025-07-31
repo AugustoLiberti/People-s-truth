@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People's Truth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-6">
+  <div class="max-w-2xl bg-white p-8 rounded-2xl shadow-lg text-center">
+    <h1 class="text-4xl font-bold mb-4">People's Truth</h1>
+    <p class="text-lg text-gray-700 mb-6">
+      100 simple choices. One global experiment.
+    </p>
+    <button onclick="window.location.href='quiz.html'" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 mb-6">
+      Start the Quiz
+    </button>
+    <div class="flex gap-2 justify-center">
+      <a href="https://twitter.com/intent/tweet?text=Take%20the%20People%27s%20Truth%20quiz%20now%21%20" target="_blank" class="px-3 py-2 bg-blue-400 text-white rounded">Twitter</a>
+      <a href="https://api.whatsapp.com/send?text=Take%20the%20People%27s%20Truth%20quiz%20now%21%20" target="_blank" class="px-3 py-2 bg-green-500 text-white rounded">WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="px-3 py-2 bg-blue-800 text-white rounded">Facebook</a>
+      <button onclick="navigator.clipboard.writeText(window.location.href)" class="px-3 py-2 bg-gray-300 text-black rounded">Copy Link</button>
+    </div>
+  </div>
+</body>
+</html>

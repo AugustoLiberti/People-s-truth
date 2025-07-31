@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People's Truth Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>@keyframes fadeIn { from {opacity:0;} to {opacity:1;} } .fade-in {animation:fadeIn 0.5s ease-in forwards;}</style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen relative">
+  <div id="app" class="max-w-xl w-full p-6 bg-white rounded-2xl shadow-lg text-center"></div>
+  <button onclick="resetAllVotes()" class="fixed top-4 right-4 px-3 py-2 bg-red-500 text-white rounded">Reset All</button>
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
