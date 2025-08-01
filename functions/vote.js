@@ -10,7 +10,7 @@ export const handler = async (event) => {
   // Parse incoming vote data
   const data = JSON.parse(event.body);
 
-  // GeoIP lookup
+  // GeoIP lookup based on client IP
   const ip =
     event.headers["x-nf-client-connection-ip"] ||
     event.headers["x-forwarded-for"];
@@ -29,7 +29,11 @@ export const handler = async (event) => {
        question_id, choice, vote_timestamp, time_taken_sec,
        timezone, user_agent, screen_resolution, device_type,
        latitude, longitude, geo_country, geo_region, geo_city
-     ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)`,
+     ) VALUES (
+       $1, $2, $3, $4,
+       $5, $6, $7, $8,
+       $9, $10, $11, $12, $13
+     )`,
     [
       data.questionId,
       data.choice,
@@ -49,5 +53,6 @@ export const handler = async (event) => {
 
   // Close the database connection
   await client.end();
+
   return { statusCode: 204 };
 };
